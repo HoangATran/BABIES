@@ -250,8 +250,8 @@ parser.add_argument('--attack', type=str, default='dct', help='Attack')         
 parser.add_argument('--order', type=str, default='strided', help='Order: strided or random.')       # strided or random. Default: strided
 parser.add_argument('--targeted', action='store_true', help='Targeted or untargeted attack.')       # TARGETED or UNTARGETED
 parser.add_argument('--interp', action='store_false', help='Applying interpolation or not.')        # apply interpolation or not. Default: True
-parser.add_argument('--total_size', type=int, help='Number of images.')                             # 1000 for CIFAR10 and MNIST, 200 for ImageNet (standard), 100 for ImageNet (robust)
-parser.add_argument('--batch_size', type=int, help='Batch size.')                                   # 5000 for ImageNet and CIFAR, 
+parser.add_argument('--total_size', type=int, help='Number of images.')
+parser.add_argument('--batch_size', type=int, help='Batch size.')
 parser.add_argument('--max_iters', type=int, help='Maximum number of iterations.')                  # maximum number of iterations.                                                          # 
 parser.add_argument('--rho', type=float, help='Radius of the L2 ball.')  
 parser.add_argument('--eps', type=float, help='Querying step.')                                            
