@@ -1,6 +1,6 @@
 # Exploiting loss smoothness to improve query efficiency of black-box adversarial attack
 
-This repository is the official implementation of the BABIES algorithm (*Black-box Attack Based on IntErpolation Scheme*) in the paper **Exploiting the local parabolic landscapes of adversarial losses to accelerate black-box adversarial attack** (by Hoang Tran, Dan Lu and Guannan Zhang), published at ECCV 2022. Our codes were developed based on [cg563/simple-blackbox-attack](https://github.com/cg563/simple-blackbox-attack). 
+This repository is the official implementation of the BABIES algorithm (*Black-box Attack Based on IntErpolation Scheme*) for the ECCV 2022 paper **Exploiting the local parabolic landscapes of adversarial losses to accelerate black-box adversarial attack** (by Hoang Tran, Dan Lu and Guannan Zhang). Our codes were developed based on [cg563/simple-blackbox-attack](https://github.com/cg563/simple-blackbox-attack). 
 
 
 
@@ -19,7 +19,7 @@ Our codes were tested on GPU with:
 
 We perform the evaluation on three sets of MNIST, CIFAR-10 and ImageNet images. We include these sets in the repository.  
 
-For **MNIST**, we randomly select 1,000 correctly labeled images from the MNIST testing sets. In targeted attack, the target labels are uniformly sampled at random, and the same target labels are used for all evaluation. The attacked images, their correct and targeted labels will be loaded from file `mnist_testset.pth` in the folder `MNIST/data`. 
+For **MNIST**, we randomly select 1,000 correctly labeled images from the MNIST testing sets. In targeted attack, the target labels are uniformly sampled at random, and the same target labels are used for all evaluations. The attacked images, their correct and targeted labels will be loaded from file `mnist_testset.pth` in the folder `MNIST/data`. 
 
 For **CIFAR-10**, we randomly select 1,000 correctly labeled images from the CIFAR testing sets. The attacked images, their correct and targeted labels will be loaded from file `cifar_testset.pth` in the folder `CIFAR10/data`. For convenience, we also include these images in `CIFAR10/data/imgs` folder, as well as their labels in `.txt` files. 
 
@@ -29,9 +29,9 @@ For **ImageNet**, the attacks are performed on a set of 1000 correctly labeled i
 
 ## Models
 
-We use our method and the other baselines to attack eight pre-trained classifiers (four standard and four l<sub>2</sub>-robust).
+We use our method to attack eight pre-trained classifiers (four standard and four l<sub>2</sub>-robust).
 
-The pre-trained model for **MNIST** is an l<sub>2</sub>-robust CNN at radius 0.005, trained by TRADES ([https://github.com/yaodongyu/TRADES](https://github.com/yaodongyu/TRADES)). The model is provided at `MNIST/models/smallCNN_l2_eps0.005.pt`.
+The pre-trained model for **MNIST** is an l<sub>2</sub>-robust CNN at radius 0.005, trained by TRADES ([https://github.com/yaodongyu/TRADES](https://github.com/yaodongyu/TRADES)). The model is provided at `MNIST/models/smallCNN_l2_eps0.005_mnist.pt`.
 
 For **CIFAR-10**, we test two standard classifiers: inception_v3 and vgg13_bn. The pre-trained models were acquired from [https://github.com/huyvnphan/PyTorch_CIFAR10](https://github.com/huyvnphan/PyTorch_CIFAR10). We also test one pre-trained  l<sub>2</sub>-robust Resnet50 model at radius 1, which was acquired from [https://github.com/MadryLab/robustness](https://github.com/MadryLab/robustness). These models are put in `CIFAR10/models/state_dicts`. 
 
@@ -74,3 +74,15 @@ The target classifiers, experiment parameters and algorithm parameters to reprod
 
 
 
+## Citations
+
+```
+@article{BABIES_ECCV2022,
+  title={Exploiting the local parabolic landscapes of adversarial losses to accelerate black-box adversarial attack},
+  author={Tran, Hoang and Lu, Dan and Zhang, Guannan},
+  conference={ECCV},
+  year={2022}
+}
+```
+
+ 
