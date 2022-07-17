@@ -1,0 +1,3 @@
+*.psd filter=lfs diff=lfs merge=lfs -text
+CIFAR10/models/state_dicts/vgg13_bn.pt filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
