@@ -1,6 +1,6 @@
 # Exploiting loss smoothness to improve query efficiency of black-box adversarial attack
 
-This repository is the official implementation of the BABIES algorithm (*Black-box Attack Based on IntErpolation Scheme*) developed in the paper **Exploiting the local parabolic landscapes of adversarial losses to accelerate black-box adversarial attack** (by Hoang Tran, Dan Lu and Guannan Zhang), published at ECCV 2022. 
+This repository is the official implementation of the BABIES algorithm (*Black-box Attack Based on IntErpolation Scheme*) in the paper **Exploiting the local parabolic landscapes of adversarial losses to accelerate black-box adversarial attack** (by Hoang Tran, Dan Lu and Guannan Zhang), published at ECCV 2022. Our codes were developed based on [cg563/simple-blackbox-attack](https://github.com/cg563/simple-blackbox-attack). 
 
 
 
